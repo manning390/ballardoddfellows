@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply font-alegreya-sans text-neutral-600;
+	}
+	h2 {
+		@apply font-alegreya md:text-4xl text-2xl text-accent;
+	}
+	a {
+		@apply text-accent;
+	}
+	a:hover {
+		@apply underline;
+	}
+}

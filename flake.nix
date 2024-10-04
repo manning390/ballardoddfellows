@@ -31,10 +31,18 @@
               modules = [
                 {
                   packages = with pkgs; [
+                    nodePackages.eslint
                     nodePackages.vscode-langservers-extracted
                     emmet-language-server
                     nodePackages.svelte-language-server
                   ];
+
+                  languages.typescript.enable = true;
+                  languages.javascript.enable = true;
+
+                  processes = {
+                    vite.exec = "npm run dev";
+                  };
 
                 }
               ];
